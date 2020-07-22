@@ -1,6 +1,5 @@
 package com.lambdaschool.shoppingcart.exceptions;
 
-import com.lambdaschool.shoppingcart.handlers.HelperFunctions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
 import org.springframework.stereotype.Component;
