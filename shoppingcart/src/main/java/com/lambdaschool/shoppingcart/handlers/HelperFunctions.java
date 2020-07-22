@@ -49,7 +49,7 @@ public interface HelperFunctions
         return listVE;
     }
 
-}
+
 
     boolean isAuthorizedToMakeChange(String username);
 }
