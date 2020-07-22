@@ -96,8 +96,8 @@ private UserRepository userrepos;
         newUser.setUsername(user.getUsername()
                 .toLowerCase());
         newUser.setPasswordNoEncrypt(user.getPassword());
-        newUser.setPrimaryemail(user.getPrimaryemail()
-                .toLowerCase());
+        //newUser.setPrimaryemail(user.getPrimaryemail()
+                //.toLowerCase());
 
         newUser.getRoles()
                 .clear();
@@ -143,11 +143,11 @@ private UserRepository userrepos;
                 currentUser.setPasswordNoEncrypt(user.getPassword());
             }
 
-            if (user.getPrimaryemail() != null)
-            {
-                currentUser.setPrimaryemail(user.getPrimaryemail()
-                        .toLowerCase());
-            }
+            //if (user.getPrimaryemail() != null)
+            //{
+                //currentUser.setPrimaryemail(user.getPrimaryemail()
+                        //.toLowerCase());
+            //}
 
             if (user.getRoles()
                     .size() > 0)
