@@ -47,6 +47,8 @@ public class User
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
+
+    private String comments;
     /**
      * Primary email account of user. Could be used as the userid. Cannot be null and must be unique.
      */
@@ -223,6 +225,14 @@ public class User
     public void setRoles(Set<UserRoles> roles)
     {
         this.roles = roles;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
     @JsonIgnore
