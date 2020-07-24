@@ -47,6 +47,12 @@ public class User
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password = "";
 
+    @OneToMany(mappedBy = "user",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    @JsonIgnoreProperties(value = "user", allowSetters = true)
+    private List<Cart> carts = new ArrayList<>();
+
 
     private String comments;
     /**
@@ -64,7 +70,7 @@ public class User
             cascade = CascadeType.ALL,
             orphanRemoval = true)
     @JsonIgnoreProperties(value = "user", allowSetters = true)
-    private List<Useremail> useremails = new ArrayList<>();
+    private List<Useremail> useremail = new ArrayList<>();
 
     /**
      * Part of the join relationship between user and role
@@ -94,7 +100,7 @@ public class User
     public User(
             String username,
             String password)
-            //String primaryemail
+    //String primaryemail
 
     {
         setUsername(username);
@@ -195,7 +201,7 @@ public class User
      */
     public List<Useremail> getUseremails()
     {
-        return useremails;
+        return useremail;
     }
 
     /**
@@ -203,9 +209,9 @@ public class User
      *
      * @param useremails the new list of useremails (List(Useremail)) for this user
      */
-    public void setUseremails(List<Useremail> useremails)
+    public void setUseremails(List<Useremail> useremail)
     {
-        this.useremails = useremails;
+        this.useremail = useremail;
     }
 
     /**
